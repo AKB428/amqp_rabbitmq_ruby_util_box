@@ -56,6 +56,9 @@ while(true) do
       puts 'upload OK'
     else
       puts 'upload fail! ><'
+      # TODO 一度だけトークンを取得し直す、トークンリフレッシュの暫定コード
+      token = rabbit_swift_client.get_token
+      rabbit_swift_client.upload(token, swift_conf_json['endPoint'] + dest_path, src_path)
     end
 
   end
