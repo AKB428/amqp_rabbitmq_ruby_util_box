@@ -4,7 +4,7 @@ conn = Bunny.new
 conn.start
 
 ch   = conn.create_channel
-q    = ch.queue("development.dwonload_url")
+q    = ch.queue("development.download_url")
 
 puts " [*] Waiting for messages in #{q.name}. To exit press CTRL+C"
 
