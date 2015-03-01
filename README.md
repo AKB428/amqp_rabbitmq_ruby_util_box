@@ -8,8 +8,8 @@ https://www.rabbitmq.com/
 
 Name:helloにキューを送るサンプル
 
-| Property     | Body               |
-| ------------ | ------------------ |
+| Property     | Value               |
+| :------------ | :------------------ |
 | Name         | hello              |
 | Body         | Hello World! (><)  |
 
@@ -17,8 +17,8 @@ Name:helloにキューを送るサンプル
 
 引数でNameとキューメッセージを指定するサンプル
 
-| Property     | Body               |
-| ------------ | ------------------ |
+| Property     | Value               |
+| :------------ | :------------------ |
 | Name         | ARGV[0]              |
 | Body         | ARGV[1]  |
 
@@ -32,8 +32,8 @@ Name:helloにキューを送るサンプル
 ポーリングしキューを受け取るサンプル
 
 
-| Property     | Body               |Sample|
-| ------------ | ------------------ |-------|
+| Property     | Value               |Sample|
+| :------------ | :------------------ |:-------|
 | Name         | development.download_url||
 | Body         | 任意の文字列|AAAAAAAAAAAA|
 
@@ -42,8 +42,8 @@ Name:helloにキューを送るサンプル
 
 ポーリングし受け取ったキューURLをダウンロードするサンプル
 
-| Property     | Body               |Sample|
-| ------------ | ------------------ |-------|
+| Property     | Value               |Sample|
+| :------------ | :------------------ |:-------|
 | Name         | development.download_url|
 | Body         | [URL][SPACE][ダウンロードパス]  |http://i.imgur.com/rqFZVhq.jpg /Users/Siori/code/git_akb428/amqp_rabbitmq_ruby_util_box/private|
 
