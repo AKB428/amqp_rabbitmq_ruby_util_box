@@ -8,12 +8,10 @@ https://www.rabbitmq.com/
 
 Name:helloにキューを送るサンプル
 
-### Name
-    hello
-
-### Body
-    Hello World! (><)
-
+| Property     | Body          |
+| ------------ | ------------- |
+| Name         | hello         |
+| Body         | Hello World! (><)  |
 
 ## send_args.rb
 
