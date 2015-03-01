@@ -8,20 +8,19 @@ https://www.rabbitmq.com/
 
 Name:helloにキューを送るサンプル
 
-| Property     | Body          |
-| ------------ | ------------- |
-| Name         | hello         |
+| Property     | Body               |
+| ------------ | ------------------ |
+| Name         | hello              |
 | Body         | Hello World! (><)  |
 
 ## send_args.rb
 
 引数でNameとキューメッセージを指定するサンプル
 
-### Name
-    ARGV[0]
-
-### Body
-    ARGV[1]
+| Property     | Body               |
+| ------------ | ------------------ |
+| Name         | ARGV[0]              |
+| Body         | ARGV[1]  |
 
 ### コマンド例
 
@@ -32,26 +31,20 @@ Name:helloにキューを送るサンプル
 
 ポーリングしキューを受け取るサンプル
 
-### Name
-    development.download_url
-### Body
 
-[任意の文字列]
-
-     AAAAAAAAAAAAAAAAA
+| Property     | Body               |Sample|
+| ------------ | ------------------ |-------|
+| Name         | development.download_url||
+| Body         | 任意の文字列|AAAAAAAAAAAA|
 
 
 ## receive_download_url.rb
 
 ポーリングし受け取ったキューURLをダウンロードするサンプル
 
-### Name
-    development.download_url
+| Property     | Body               |Sample|
+| ------------ | ------------------ |-------|
+| Name         | development.download_url|
+| Body         | [URL][SPACE][ダウンロードパス]  |http://i.imgur.com/rqFZVhq.jpg /Users/Siori/code/git_akb428/amqp_rabbitmq_ruby_util_box/private|
 
-### Body
-
-[URL][SPACE][ダウンロードパス]
-
-    http://i.imgur.com/rqFZVhq.jpg /Users/Siori/code/git_akb428/amqp_rabbitmq_ruby_util_box/private
-    http://www.yuzu-soft.com/new/product/sothewitch/bin/sw_twitter.zip /Users/Siori/code/git_akb428/amqp_rabbitmq_ruby_util_box/private
 
