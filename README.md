@@ -47,4 +47,36 @@ Name:helloにキューを送るサンプル
 | Name         | development.download_url|
 | Body         | [URL][SPACE][ダウンロードパス]  |http://i.imgur.com/rqFZVhq.jpg /Users/Siori/code/git_akb428/amqp_rabbitmq_ruby_util_box/private|
 
+## receive_object_strage_queue.rb
+
+OpenStack Object Strage Send Queue Sample
+
+| Property     | Value               |Sample|
+| :------------ | :------------------ |:-------|
+| Name         | development.send_object_strage|
+| Body         | JSON_Body  ||
+
+JSON Body
+
+| Property     | Value               |Sample|
+| :------------ | :------------------ |:-------|
+| dest_path         | object strage dest container path| /container0001 |
+| src_path         | src file path or src folder path  | /home/niko/hogehoge.txt |
+
+JSON Body Sample
+
+```
+{
+  "dest_path": "/test",
+  "src_path": "./private/EBjHCeH.jpg"
+}
+```
+command
+
+	bundle exec ruby receive_object_strage_queue.rb
+
+送信側のコマンド、サンプル
+
+	bundle exec ruby send_args.rb development.send_object_strage '{"dest_path":"/test", "src_path":"./private/EBjHCeH.jpg"}'
+
 
