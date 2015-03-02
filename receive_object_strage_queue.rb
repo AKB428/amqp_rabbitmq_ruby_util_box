@@ -45,6 +45,7 @@ while(true) do
       flag += 1
       puts ex.message
       # TODO 一度だけトークンを取得し直す、トークンリフレッシュの暫定コード
+      rabbit_swift_client = RabbitSwift::Client.new(swift_conf_json);
       token = rabbit_swift_client.get_token
       if flag < 2
         retry
@@ -57,6 +58,7 @@ while(true) do
     else
       puts 'upload fail! ><'
       # TODO 一度だけトークンを取得し直す、トークンリフレッシュの暫定コード
+      rabbit_swift_client = RabbitSwift::Client.new(swift_conf_json);
       token = rabbit_swift_client.get_token
       rabbit_swift_client.upload(token, swift_conf_json['endPoint'] + dest_path, src_path)
     end
