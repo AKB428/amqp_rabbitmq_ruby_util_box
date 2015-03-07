@@ -37,6 +37,16 @@ Name:helloにキューを送るサンプル
 | Name         | development.download_url||
 | Body         | 任意の文字列|AAAAAAAAAAAA|
 
+## receive_args_name.rb
+
+引数で指定したNameをポーリングしキューを受け取るサンプル
+
+
+| Property     | Value               |Sample|
+| :------------ | :------------------ |:-------|
+| Name         | ARGV[0]|twitter.streaming.all|
+| Body         | 任意の文字列|AAAAAAAAAAAA|
+
 
 ## receive_download_url.rb
 
