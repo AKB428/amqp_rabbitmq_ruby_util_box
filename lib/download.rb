@@ -11,6 +11,7 @@ def download(url, opt)
   dest_file = File.join('./', File.basename(url))
   if opt.has_key?('dest_folder')
     dest_file = File.join(opt['dest_folder'], File.basename(url))
+    FileUtils.mkdir_p(opt['dest_folder']) unless File.exist?(opt['dest_folder'])
   end
 
   http_client.receive_timeout = 60 * 10
